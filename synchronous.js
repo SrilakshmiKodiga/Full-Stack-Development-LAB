@@ -1,0 +1,12 @@
+import fs from 'fs';
+console.log('Before Writing');
+const data="This is a sample text file created using synchronous file operation in node.js";
+console.log('After Writing');
+fs.writeFileSync('sample.txt', data, 'utf8');
+console.log('File created successfully using synchronous file operation.');
+console.log('Before Reading');
+const readData=fs.readFileSync('sample.txt','utf8');
+console.log('After Reading');
+console.log('File read successfully using synchronous file operation.');
+console.log(readData);
+console.log('End of synchronous file operation.');
